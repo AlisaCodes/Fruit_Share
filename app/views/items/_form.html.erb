@@ -1,0 +1,14 @@
+<div id="add-item-form">
+  <%= form_for @item, remote: true do |f| %>
+
+    <%= f.label :name, "What it is?" %>
+    <%= f.text_area :name, rows: 4, class: "form-control" %>
+    <br>
+    <%= f.label :quantity, 'How much?' %>
+    <%= f.text_area :quantity, rows: 4, class: "form-control" %>
+    <br>
+    <%= f.label :description, 'Describe it?' %>
+    <%= f.text_area :description, rows: 4, class: "form-control" %>
+    <%= f.submit "Submit", class: "btn btn-default center-block" %>
+  <% end %>
+</div>

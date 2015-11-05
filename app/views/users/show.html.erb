@@ -1,0 +1,14 @@
+<h1>Hello <%=current_user.name%></h1>
+
+<h3>Have you fruit to share?</h3>
+
+<div id="new-item-area">
+  <%= link_to 'add item', new_item_path, id: 'new-item-link', remote: true %>
+</div>
+
+<h4>Your Items</h4>
+  <ul id="item-list">
+    <% current_user.items.each do |item| %>
+      <li><%= item.name %></li>
+    <% end %>
+  </ul>
