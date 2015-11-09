@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'haml'
 gem 'bcrypt', '~> 3.1.5', require: "bcrypt"
 gem 'devise'
+gem "paperclip", "~> 4.3"
 
 group :development do
   gem 'byebug'
