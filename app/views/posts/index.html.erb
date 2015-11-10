@@ -1,3 +1,15 @@
 <div id="words">
   <h1>YOYOYOYOYOYOYOYOYOYOYOYO</h1>
 </div>
+
+
+<ul id="each_post">
+  <% @posts.each do |post| %>
+   <li><%= posts.title %></li>
+  <% end %>
+</ul>
+
+
+<div id="link_container">
+  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %> 
+</div>
