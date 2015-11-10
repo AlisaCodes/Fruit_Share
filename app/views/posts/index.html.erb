@@ -5,11 +5,11 @@
 
 <ul id="each_post">
   <% @posts.each do |post| %>
-   <li><%= posts.title %></li>
+   <li><%= post.title %> | <%= post.body %></li>
   <% end %>
 </ul>
 
 
 <div id="link_container">
-  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %> 
+  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %>
 </div>
