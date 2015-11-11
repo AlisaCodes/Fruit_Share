@@ -1,5 +1,9 @@
 <%= @post.title %>
 
+<% @post.comments.each do |comment| %>
+  <%= comment.body %>
+<% end %>
+
 <div class="comments-area">
   <h4>New Comment</h4>
 
