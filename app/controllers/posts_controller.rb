@@ -5,24 +5,21 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-
-    respond_to do |format|
-      format.html { redirect_to posts_path}
-      format.js
-    end
+    @post = current_user.posts.new
   end
 
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      respond_to do |format|
-        format.html { redirect_to user_path }
-        format.js
-      end
+      redirect_to post_path(@post)
     else
       flash[:alert] = 'Sa-say whaat?'
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
+
   end
 
   private

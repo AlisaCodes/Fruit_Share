@@ -1,3 +1,3 @@
 $('form').remove();
-$('#each_post').append("<li><%= @post.title %></li>");
+$('#each_post').append('<%= link_to "#{@post.title}", post_path(@post) %>');
 $('#new_post_link').show();

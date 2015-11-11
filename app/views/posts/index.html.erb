@@ -5,9 +5,11 @@
 
 <ul id="each_post">
   <% @posts.each do |post| %>
-   <li><%= post.title %> | <%= post.body %></li>
+   <%= link_to "#{post.title}", post_path(post) %>
+   <br>
   <% end %>
 </ul>
+
 
 
 <div id="link_container">
